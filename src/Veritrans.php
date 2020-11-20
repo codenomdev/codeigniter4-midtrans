@@ -2,31 +2,23 @@
 
 namespace Codenom\Midtrans;
 
+use Codenom\Midtrans\Libraries\Midtrans;
 use Codenom\Midtrans\HTTP\APIMidtrans;
-use Codenom\Midtrans\Libraries\Midtrans as LibrariesMidtrans;
 
-class Midtrans
+class Veritrans
 {
     /**
-     * @var \Codenom\Config\Midtrans
+     * Property Protected
+     * 
+     * @var \Codenom\Framework\Config\Midtrans;
      */
     protected $config;
+    protected $veritrans;
 
-    /**
-     * @var \Codenom\Midtrans\Libraries\Midtrans;
-     */
-    protected $midtrans;
-
-    /**
-     * Construct builder class
-     * 
-     * @param $config \Codenom\Config\Midtrans
-     * @var \Codenom\Midtrans\Libraries\Midtrans
-     */
     public function __construct($config = null)
     {
         $this->config = $config;
-        $this->midtrans = new LibrariesMidtrans();
+        $this->veritrans = new Midtrans();
     }
 
     /**
@@ -38,14 +30,13 @@ class Midtrans
      * @param array $placeOrder
      * @return object response CURL
      */
-    public function getSnapToken(array $placeOrder = [])
+    public function getStatus($id)
     {
         return \Codenom\Midtrans\Parse\JSONParse::decodeFromObject(
             APIMidtrans::call(
-                \Codenom\Midtrans\Constant::CURL_TYPE_POST,
-                $this->midtrans->getSnapBaseUrl() . '/transactions',
-                $this->config->serverKey,
-                $placeOrder
+                \Codenom\Midtrans\Constant::CURL_TYPE_GET,
+                $this->veritrans->getBaseUrl() . '/' . $id . '/status',
+                $this->config->serverKey
             )
         );
     }
