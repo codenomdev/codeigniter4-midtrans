@@ -14,7 +14,7 @@
     ],
     "require": {
         "php": "~7.2||~7.3.0",
-        "midtrans/midtrans-php": "2.*"
+        "laminas/laminas-json": "dev-master"
     },
     "require-dev": {
         "codeigniter4/framework": "dev-master"
