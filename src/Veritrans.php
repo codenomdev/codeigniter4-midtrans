@@ -10,7 +10,7 @@ class Veritrans
     /**
      * Property Protected
      * 
-     * @var \Codenom\Framework\Config\Midtrans;
+     * @var \Codenom\Midtrans\Config\Midtrans;
      */
     protected $config;
     protected $veritrans;
@@ -38,6 +38,104 @@ class Veritrans
                 $this->veritrans->getBaseUrl() . '/' . $id . '/status',
                 $this->config->serverKey
             )
+        );
+    }
+
+    /**
+     * Payment VT Web Checkout Payments
+     * Data to Decode before sent CURL Request
+     * After get response from CURL, then parsing data encode to decode [Object]
+     * 
+     * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
+     * @param array $payload
+     * @return string Redirect URL
+     */
+    public function vtWebCharge($payload)
+    {
+        $result = \Codenom\Midtrans\Parse\JSONParse::decodeFromObject(
+            \Codenom\Midtrans\Constant::CURL_TYPE_POST,
+            $this->veritrans->getBaseUrl() . '/charge',
+            $this->config->serverKey,
+            $payload
+        );
+
+        return $result->redirect_url;
+    }
+
+    /**
+     * Payment VT Web Direct Checkout Payments
+     * Data to Decode before sent CURL Request
+     * After get response from CURL, then parsing data encode to decode [Object]
+     * 
+     * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
+     * @param array $payload
+     * @return object response CURL
+     */
+    public function vtWebDirectCharge($payload)
+    {
+        return \Codenom\Midtrans\Parse\JSONParse::decodeFromObject(
+            \Codenom\Midtrans\Constant::CURL_TYPE_POST,
+            $this->veritrans->getBaseUrl() . '/charge',
+            $this->config->serverKey,
+            $payload
+        );
+    }
+
+    /**
+     * Appove challenge transaction
+     * Data to Decode before sent CURL Request
+     * After get response from CURL, then parsing data encode to decode [Object]
+     * 
+     * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
+     * @param string $id Order ID or transaction ID
+     * @return string
+     */
+    public function approve($id)
+    {
+        $result = \Codenom\Midtrans\Parse\JSONParse::decodeFromObject(
+            \Codenom\Midtrans\Constant::CURL_TYPE_POST,
+            $this->veritrans->getBaseUrl() . '/' . $id . '/approve',
+            $this->config->serverKey
+        );
+
+        return $result->status_code;
+    }
+
+    /**
+     * Cancel transaction before it's setteled
+     * Data to Decode before sent CURL Request
+     * After get response from CURL, then parsing data encode to decode [Object]
+     * 
+     * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
+     * @param string $id Order ID or transaction ID
+     * @return string
+     */
+    public function cancel($id)
+    {
+        $result = \Codenom\Midtrans\Parse\JSONParse::decodeFromObject(
+            \Codenom\Midtrans\Constant::CURL_TYPE_POST,
+            $this->veritrans->getBaseUrl() . '/' . $id . '/cancel',
+            $this->config->serverKey
+        );
+
+        return $result->status_code;
+    }
+
+    /**
+     * Expire transaction before it's setteled
+     * Data to Decode before sent CURL Request
+     * After get response from CURL, then parsing data encode to decode [Object]
+     * 
+     * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
+     * @param string $id Order ID or transaction ID
+     * @return mixed[]
+     */
+    public function expire($id)
+    {
+        return \Codenom\Midtrans\Parse\JSONParse::decodeFromObject(
+            \Codenom\Midtrans\Constant::CURL_TYPE_POST,
+            $this->veritrans->getBaseUrl() . '/' . $id . '/expire',
+            $this->config->serverKey
         );
     }
 }

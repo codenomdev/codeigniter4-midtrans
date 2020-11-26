@@ -1,2 +1,88 @@
-# codeigniter4-midtrans
- Midtrans Integration with CodeIgniter 4
+# Midtrans for CodeIgniter 4 [UNOFFICIAL LIBRARY]
+=======================================================
+ Midtrans :heart: CodeIgniter 4!
+
+ Veritrans now is Midtrans
+
+This is the all new Codeigniter client library for Veritrans 2.0. Visit [https://www.midtrans.com](https://www.veritrans.co.id) for more information about the product and see documentation at [http://docs.midtrans.com](http://docs.veritrans.co.id) for more technical details. 
+
+### What's new?
+SNAP! for technical info Visit [https://snap-docs.midtrans.com](https://snap-docs.midtrans.com)
+
+### Requirements
+The following plugin is tested under following environment:
+* PHP v7.2.x or greater.
+* CodeIgniter v4.0.4.
+* Laminas JSON (Include).
+
+## Installation
+* Use Composer ``` composer require codenom/midtrans ``` (Recommended).
+
+## Configuration
+After installation Module, please follow instruction:
+* Publish via CLI: ```php php spark codenom:midtrans publish ``` .
+* After publish, check file Midtrans.php on **App/Config/Midtrans.php**.
+* Setup Merchant Key, Client Key and set Production ```php public $isProduction = **TRUE** (Production) or **FALSE** (Sandbox) ``` on Midtrans.php.
+For more setup Merchant Key & Client Key [https://docs.midtrans.com/en/midtrans-account/overview?id=retrieving-api-access-keys](Retrieve API Access Key).
+For more setup Environments [https://docs.midtrans.com/en/midtrans-account/overview?id=switching-environment](Environments).
+
+## Using Midtrans Library
+
+### Use Midtrans
+```php
+//load services Midtrans
+$services = new Config\Services::Midtrans();
+```
+
+**OR**
+
+```php
+//load services Midtrans
+$services = new services('Midtrans');
+```
+
+## Use Veritrans
+```php
+//load services Veritrans
+$services = new Config\Services::veritrans();
+```
+
+**OR**
+
+```php
+//load services Veritrans
+$services = new services('Veritrans');
+```
+
+### Available Function
+* Appove challenge transaction
+```php
+/**
+ * @param $id ID transactions
+ * @return status code from Midtrans
+ */
+$services->approve($id);
+```
+
+* Cancel transaction before it's setteled
+```php
+/**
+ * @param string $id Order ID or transaction ID
+ * @return string
+*/
+$services->cancel($id);
+```
+
+* Expire transaction before it's setteled
+```php
+/**
+ * @param string $id Order ID or transaction ID
+ * @return mixed[]
+ */
+$services->expire($id);
+```
+## Documentation
+**For more COMINGSOON**
+
+## Sample Data
+**COMINGSOON**

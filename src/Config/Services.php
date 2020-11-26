@@ -17,6 +17,7 @@ class Services extends CoreServices
         $midtransConfig = $midtransConfig ?? config('Midtrans');
         return new Midtrans($midtransConfig);
     }
+
     public static function Veritrans(MidtransConfig $midtransConfig = null, bool $getShared = true)
     {
         if ($getShared) {
