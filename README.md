@@ -23,9 +23,9 @@ After installation Module, please follow instruction:
 * After publish, check file Midtrans.php on **App/Config/Midtrans.php**.
 * Setup Merchant Key, Client Key and set Production ```php public $isProduction = **TRUE** (Production) or **FALSE** (Sandbox) ``` on Midtrans.php.
 
-For more setup Merchant Key & Client Key [Retrieve API Access Key](https://docs.midtrans.com/en/midtrans-account/overview?id=retrieving-api-access-keys).
+#### For more setup Merchant Key & Client Key [Retrieve API Access Key](https://docs.midtrans.com/en/midtrans-account/overview?id=retrieving-api-access-keys).
 
-For more setup Environments [Environments](https://docs.midtrans.com/en/midtrans-account/overview?id=switching-environment).
+#### For more setup Environments [Environments](https://docs.midtrans.com/en/midtrans-account/overview?id=switching-environment).
 
 ## Using Midtrans Library
 
