@@ -27,7 +27,7 @@ class Veritrans
      * After get response from CURL, then parsing data encode to decode [Object]
      * 
      * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
-     * @param array $placeOrder
+     * @param string $id
      * @return object response CURL
      */
     public function getStatus($id)

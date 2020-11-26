@@ -21,7 +21,7 @@ class JSONParse
      * 
      * @var \Laminas\Json\Json
      * @param array
-     * @return mixed
+     * @return object
      */
     public static function decodeFromObject($param)
     {
@@ -33,7 +33,7 @@ class JSONParse
      * 
      * @var \Laminas\Json\Json
      * @param array
-     * @return mixed
+     * @return array
      */
     public static function decodeFromArray($param)
     {

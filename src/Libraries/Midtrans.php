@@ -7,7 +7,7 @@ class Midtrans
     /**
      * Property Protected
      * 
-     * @var \Codenom\Framework\Config\Midtrans;
+     * @var \Codenom\Midtrans\Config\Midtrans;
      */
     protected $config;
 

@@ -8,7 +8,7 @@ use Codenom\Midtrans\Libraries\Midtrans as LibrariesMidtrans;
 class Midtrans
 {
     /**
-     * @var \Codenom\Config\Midtrans
+     * @var \Codenom\Midtrans\Config\Midtrans
      */
     protected $config;
 
@@ -20,7 +20,7 @@ class Midtrans
     /**
      * Construct builder class
      * 
-     * @param $config \Codenom\Config\Midtrans
+     * @param $config \Codenom\Midtrans\Config\Midtrans
      * @var \Codenom\Midtrans\Libraries\Midtrans
      */
     public function __construct($config = null)
