@@ -22,8 +22,10 @@ After installation Module, please follow instruction:
 * Publish via CLI: ```php php spark codenom:midtrans publish ``` .
 * After publish, check file Midtrans.php on **App/Config/Midtrans.php**.
 * Setup Merchant Key, Client Key and set Production ```php public $isProduction = **TRUE** (Production) or **FALSE** (Sandbox) ``` on Midtrans.php.
-For more setup Merchant Key & Client Key [https://docs.midtrans.com/en/midtrans-account/overview?id=retrieving-api-access-keys](Retrieve API Access Key).
-For more setup Environments [https://docs.midtrans.com/en/midtrans-account/overview?id=switching-environment](Environments).
+
+For more setup Merchant Key & Client Key [https://docs.midtrans.com/en/midtrans-account/overview?id=retrieving-api-access-keys](https://docs.midtrans.com).
+
+For more setup Environments [https://docs.midtrans.com/en/midtrans-account/overview?id=switching-environment](https://docs.midtrans.com).
 
 ## Using Midtrans Library
 
