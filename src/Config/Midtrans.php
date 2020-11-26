@@ -10,12 +10,12 @@ class Midtrans extends BaseConfig
      * Your merchant's server key
      *
      */
-    public $serverKey = 'SB-Mid-server-5V_fYHfYcH-L23CgXMQ_8HIW';
+    public $serverKey = '';
     /**
      * Your merchant's client key
      *
      */
-    public $clientKey = 'SB-Mid-client-NulOpyFTJmoQIv7p';
+    public $clientKey = '';
     /**
      * True for production
      * false for sandbox mode
