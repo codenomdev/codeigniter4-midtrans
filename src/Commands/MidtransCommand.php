@@ -12,6 +12,13 @@ class MidtransCommand extends BaseCommand
     protected $name = 'codenom:midtrans';
     protected $description = 'Midtrans config file publisher';
 
+    /**
+     * Private or protected function
+     * 
+     * @var string
+     */
+    protected $sourcePath;
+
     //--------------------------------------------------------------------
     /**
      * Copy config file
