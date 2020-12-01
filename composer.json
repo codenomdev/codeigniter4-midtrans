@@ -7,6 +7,10 @@
         "Midtrans CodeIgniter 4",
         "Midtrans"
     ],
+    "support": {
+        "issues": "https://github.com/codenomdev/codeigniter4-midtrans/issues",
+        "source": "https://github.com/codenomdev/codeigniter4-midtrans"
+    },
     "license": [
         "MIT"
     ],
