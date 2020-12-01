@@ -116,7 +116,7 @@ class Veritrans
      * 
      * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
      * @param string $id Order ID or transaction ID
-     * @return string
+     * @return object
      */
     public function cancel($id)
     {
@@ -136,7 +136,7 @@ class Veritrans
      * 
      * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
      * @param string $id Order ID or transaction ID
-     * @return mixed[]
+     * @return object
      */
     public function expire($id)
     {
