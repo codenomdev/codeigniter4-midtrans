@@ -46,7 +46,7 @@ class Midtrans
      */
     public function getSnapToken(array $placeOrder = [])
     {
-        return \Codenom\Midtrans\Parse\JSONParse::decodeFromObject(
+        return \Codenom\Midtrans\Parse\JSONParse::decodeToObject(
             APIMidtrans::call(
                 \Codenom\Midtrans\Constant::CURL_TYPE_POST,
                 $this->midtrans->getSnapBaseUrl() . '/transactions',

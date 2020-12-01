@@ -38,7 +38,7 @@ class Veritrans
      */
     public function getStatus($id)
     {
-        return \Codenom\Midtrans\Parse\JSONParse::decodeFromObject(
+        return \Codenom\Midtrans\Parse\JSONParse::decodeToObject(
             APIMidtrans::call(
                 \Codenom\Midtrans\Constant::CURL_TYPE_GET,
                 $this->veritrans->getBaseUrl() . '/' . $id . '/status',
@@ -58,7 +58,7 @@ class Veritrans
      */
     public function vtWebCharge($payload)
     {
-        $result = \Codenom\Midtrans\Parse\JSONParse::decodeFromObject(
+        $result = \Codenom\Midtrans\Parse\JSONParse::decodeToObject(
             \Codenom\Midtrans\Constant::CURL_TYPE_POST,
             $this->veritrans->getBaseUrl() . '/charge',
             $this->config->serverKey,
@@ -79,7 +79,7 @@ class Veritrans
      */
     public function vtWebDirectCharge($payload)
     {
-        return \Codenom\Midtrans\Parse\JSONParse::decodeFromObject(
+        return \Codenom\Midtrans\Parse\JSONParse::decodeToObject(
             \Codenom\Midtrans\Constant::CURL_TYPE_POST,
             $this->veritrans->getBaseUrl() . '/charge',
             $this->config->serverKey,
@@ -98,7 +98,7 @@ class Veritrans
      */
     public function approve($id)
     {
-        $result = \Codenom\Midtrans\Parse\JSONParse::decodeFromObject(
+        $result = \Codenom\Midtrans\Parse\JSONParse::decodeToObject(
             \Codenom\Midtrans\Constant::CURL_TYPE_POST,
             $this->veritrans->getBaseUrl() . '/' . $id . '/approve',
             $this->config->serverKey
@@ -118,7 +118,7 @@ class Veritrans
      */
     public function cancel($id)
     {
-        $result = \Codenom\Midtrans\Parse\JSONParse::decodeFromObject(
+        $result = \Codenom\Midtrans\Parse\JSONParse::decodeToObject(
             \Codenom\Midtrans\Constant::CURL_TYPE_POST,
             $this->veritrans->getBaseUrl() . '/' . $id . '/cancel',
             $this->config->serverKey
@@ -138,7 +138,7 @@ class Veritrans
      */
     public function expire($id)
     {
-        return \Codenom\Midtrans\Parse\JSONParse::decodeFromObject(
+        return \Codenom\Midtrans\Parse\JSONParse::decodeToObject(
             \Codenom\Midtrans\Constant::CURL_TYPE_POST,
             $this->veritrans->getBaseUrl() . '/' . $id . '/expire',
             $this->config->serverKey

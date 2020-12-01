@@ -23,25 +23,25 @@ class JSONParse
     }
 
     /**
-     * Decode data from Object return
+     * Decode data to Object return
      * 
      * @var \Laminas\Json\Json
      * @param array
      * @return object
      */
-    public static function decodeFromObject($param)
+    public static function decodeToObject($param)
     {
         return \Laminas\Json\Json::decode($param, \Laminas\Json\Json::TYPE_OBJECT);
     }
 
     /**
-     * Decode data from Array return
+     * Decode data to Array return
      * 
      * @var \Laminas\Json\Json
      * @param array
      * @return array
      */
-    public static function decodeFromArray($param)
+    public static function decodeToArray($param)
     {
         return \Laminas\Json\Json::decode($param, \Laminas\Json\Json::TYPE_ARRAY);
     }
