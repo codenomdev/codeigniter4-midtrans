@@ -3,6 +3,10 @@
     "description": "Module Midtrans Payment Methods for CodeIgniter 4",
     "type": "codeigniter4-payments",
     "homepage": "https://github.com/codenomdev/codeigniter4-midtrans",
+    "keywords": [
+        "Midtrans CodeIgniter 4",
+        "Midtrans"
+    ],
     "license": [
         "MIT"
     ],
