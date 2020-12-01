@@ -23,6 +23,11 @@ class Midtrans extends BaseConfig
      */
     public $clientKey = '';
     /**
+     * Your ID merchant's key
+     *
+     */
+    public $idMerchant = '';
+    /**
      * True for production
      * false for sandbox mode
      *
