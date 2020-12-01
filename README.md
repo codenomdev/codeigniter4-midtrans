@@ -86,4 +86,4 @@ $services->expire($id);
 **For more COMINGSOON**
 
 ## Sample Data
-**COMINGSOON**
+You can visit the following repository: [Midtrans Sample Data](https://github.com/codenomdev/midtrans-sample-data)
