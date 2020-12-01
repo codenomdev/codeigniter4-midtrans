@@ -58,14 +58,14 @@ class Veritrans
      */
     public function vtWebCharge($payload)
     {
-        $result = \Codenom\Midtrans\Parse\JSONParse::decodeToObject(
-            \Codenom\Midtrans\Constant::CURL_TYPE_POST,
-            $this->veritrans->getBaseUrl() . '/charge',
-            $this->config->serverKey,
-            $payload
-        );
-
-        return $result->redirect_url;
+        return \Codenom\Midtrans\Parse\JSONParse::decodeToObject(
+            APIMidtrans::call(
+                \Codenom\Midtrans\Constant::CURL_TYPE_POST,
+                $this->veritrans->getBaseUrl() . '/charge',
+                $this->config->serverKey,
+                $payload
+            )
+        )->redirect_url;
     }
 
     /**
@@ -80,10 +80,12 @@ class Veritrans
     public function vtWebDirectCharge($payload)
     {
         return \Codenom\Midtrans\Parse\JSONParse::decodeToObject(
-            \Codenom\Midtrans\Constant::CURL_TYPE_POST,
-            $this->veritrans->getBaseUrl() . '/charge',
-            $this->config->serverKey,
-            $payload
+            APIMidtrans::call(
+                \Codenom\Midtrans\Constant::CURL_TYPE_POST,
+                $this->veritrans->getBaseUrl() . '/charge',
+                $this->config->serverKey,
+                $payload
+            )
         );
     }
 
@@ -94,17 +96,17 @@ class Veritrans
      * 
      * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
      * @param string $id Order ID or transaction ID
-     * @return string
+     * @return Object
      */
     public function approve($id)
     {
-        $result = \Codenom\Midtrans\Parse\JSONParse::decodeToObject(
-            \Codenom\Midtrans\Constant::CURL_TYPE_POST,
-            $this->veritrans->getBaseUrl() . '/' . $id . '/approve',
-            $this->config->serverKey
+        return \Codenom\Midtrans\Parse\JSONParse::decodeToObject(
+            APIMidtrans::call(
+                \Codenom\Midtrans\Constant::CURL_TYPE_POST,
+                $this->veritrans->getBaseUrl() . '/' . $id . '/approve',
+                $this->config->serverKey
+            )
         );
-
-        return $result->status_code;
     }
 
     /**
@@ -114,17 +116,17 @@ class Veritrans
      * 
      * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
      * @param string $id Order ID or transaction ID
-     * @return string
+     * @return object
      */
     public function cancel($id)
     {
-        $result = \Codenom\Midtrans\Parse\JSONParse::decodeToObject(
-            \Codenom\Midtrans\Constant::CURL_TYPE_POST,
-            $this->veritrans->getBaseUrl() . '/' . $id . '/cancel',
-            $this->config->serverKey
+        return \Codenom\Midtrans\Parse\JSONParse::decodeToObject(
+            APIMidtrans::call(
+                \Codenom\Midtrans\Constant::CURL_TYPE_POST,
+                $this->veritrans->getBaseUrl() . '/' . $id . '/cancel',
+                $this->config->serverKey
+            )
         );
-
-        return $result->status_code;
     }
 
     /**
@@ -134,14 +136,16 @@ class Veritrans
      * 
      * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
      * @param string $id Order ID or transaction ID
-     * @return mixed[]
+     * @return object
      */
     public function expire($id)
     {
         return \Codenom\Midtrans\Parse\JSONParse::decodeToObject(
-            \Codenom\Midtrans\Constant::CURL_TYPE_POST,
-            $this->veritrans->getBaseUrl() . '/' . $id . '/expire',
-            $this->config->serverKey
+            APIMidtrans::call(
+                \Codenom\Midtrans\Constant::CURL_TYPE_POST,
+                $this->veritrans->getBaseUrl() . '/' . $id . '/expire',
+                $this->config->serverKey
+            )
         );
     }
 }
