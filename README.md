@@ -1,5 +1,6 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/codenomdev/codeigniter4-midtrans/master.svg?style=flat-square)](https://travis-ci.org/codenomdev/codeigniter4-midtrans)
+[![StyleCI](https://github.styleci.io/repos/314207113/shield?branch=master)](https://github.styleci.io/repos/314207113?branch=master)
 [![Quality Score](https://img.shields.io/scrutinizer/g/codenomdev/codeigniter4-midtrans.svg?style=flat-square)](https://scrutinizer-ci.com/g/codenomdev/codeigniter4-midtrans)
 
 # Midtrans for CodeIgniter 4 [UNOFFICIAL LIBRARY]
