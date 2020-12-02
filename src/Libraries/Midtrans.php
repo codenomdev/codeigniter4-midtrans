@@ -2,6 +2,7 @@
 
 /**
  * @see       https://github.com/codenomdev/codeigniter4-midtrans for the canonical source repository
+ *
  * @copyright 2020 - Codenom Dev (https://codenom.com).
  * @license   https://github.com/codenomdev/codeigniter4-midtrans/blob/main/LICENSE MIT License
  */
@@ -12,7 +13,7 @@ class Midtrans
 {
     /**
      * Property Protected
-     * 
+     *
      * @var \Codenom\Midtrans\Config\Midtrans;
      */
     protected $config;
@@ -24,7 +25,7 @@ class Midtrans
 
     /**
      * Get baseUrl
-     * 
+     *
      * @return string Midtrans API URL, depends on public $isProduction
      */
     public function getBaseUrl()
@@ -35,7 +36,7 @@ class Midtrans
 
     /**
      * Get snapBaseUrl
-     * 
+     *
      * @return string Snap API URL, depends on public $isProduction
      */
     public function getSnapBaseUrl()
