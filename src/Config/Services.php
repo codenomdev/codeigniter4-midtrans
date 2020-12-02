@@ -2,6 +2,7 @@
 
 /**
  * @see       https://github.com/codenomdev/codeigniter4-midtrans for the canonical source repository
+ *
  * @copyright 2020 - Codenom Dev (https://codenom.com).
  * @license   https://github.com/codenomdev/codeigniter4-midtrans/blob/main/LICENSE MIT License
  */
@@ -21,6 +22,7 @@ class Services extends CoreServices
             return self::getSharedInstance('Midtrans', $midtransConfig);
         }
         $midtransConfig = $midtransConfig ?? config('Midtrans');
+
         return new Midtrans($midtransConfig);
     }
 
@@ -30,6 +32,7 @@ class Services extends CoreServices
             return self::getSharedInstance('Veritrans', $midtransConfig);
         }
         $midtransConfig = $midtransConfig ?? config('Midtrans');
+
         return new Veritrans($midtransConfig);
     }
 }

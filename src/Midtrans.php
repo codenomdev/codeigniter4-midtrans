@@ -2,6 +2,7 @@
 
 /**
  * @see       https://github.com/codenomdev/codeigniter4-midtrans for the canonical source repository
+ *
  * @copyright 2020 - Codenom Dev (https://codenom.com).
  * @license   https://github.com/codenomdev/codeigniter4-midtrans/blob/main/LICENSE MIT License
  */
@@ -24,9 +25,10 @@ class Midtrans
     protected $midtrans;
 
     /**
-     * Construct builder class
-     * 
+     * Construct builder class.
+     *
      * @param $config \Codenom\Midtrans\Config\Midtrans
+     *
      * @var \Codenom\Midtrans\Libraries\Midtrans
      */
     public function __construct($config = null)
@@ -38,10 +40,12 @@ class Midtrans
     /**
      * Payment with SNAP Midtrans
      * Data to Decode before sent CURL Request
-     * After get response from CURL, then parsing data encode to decode [Object]
-     * 
+     * After get response from CURL, then parsing data encode to decode [Object].
+     *
      * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
+     *
      * @param array $placeOrder
+     *
      * @return object response CURL
      */
     public function getSnapToken(array $placeOrder = [])
@@ -49,7 +53,7 @@ class Midtrans
         return \Codenom\Midtrans\Parse\JSONParse::decodeToObject(
             APIMidtrans::call(
                 \Codenom\Midtrans\Constant::CURL_TYPE_POST,
-                $this->midtrans->getSnapBaseUrl() . '/transactions',
+                $this->midtrans->getSnapBaseUrl().'/transactions',
                 $this->config->serverKey,
                 $placeOrder
             )
