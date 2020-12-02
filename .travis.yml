@@ -14,13 +14,6 @@ env:
 php:
   - 7.2
 
-  install:
-  - composer update --no-interaction --prefer-dist $DEPENDENCIES
-
-script:
-  - vendor/bin/phpunit --coverage-clover=coverage.clover
-  - vendor/bin/phpstan analyse -l 7 -c phpstan.neon src
-
   branches:
   only:
     - master
