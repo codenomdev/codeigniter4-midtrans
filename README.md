@@ -1,5 +1,5 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/codenomdev/codeigniter4-midtrans/master.svg?style=flat-square)](https://travis-ci.org/codenomdev/codeigniter4-midtrans)
+[![Build Status](https://scrutinizer-ci.com/g/codenomdev/codeigniter4-midtrans/badges/build.png?b=master)](https://scrutinizer-ci.com/g/codenomdev/codeigniter4-midtrans/build-status/master)
 [![StyleCI](https://github.styleci.io/repos/314207113/shield?branch=master)](https://github.styleci.io/repos/314207113?branch=master)
 [![Quality Score](https://img.shields.io/scrutinizer/g/codenomdev/codeigniter4-midtrans.svg?style=flat-square)](https://scrutinizer-ci.com/g/codenomdev/codeigniter4-midtrans)
 

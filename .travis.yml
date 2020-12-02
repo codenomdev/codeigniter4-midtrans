@@ -17,6 +17,6 @@ php:
 install:
   - composer update --no-interaction --prefer-dist $DEPENDENCIES
 
-  branches:
+branches:
   only:
     - master
