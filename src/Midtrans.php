@@ -25,7 +25,7 @@ class Midtrans
     protected $midtrans;
 
     /**
-     * Construct builder class
+     * Construct builder class.
      *
      * @param $config \Codenom\Midtrans\Config\Midtrans
      *
@@ -40,7 +40,7 @@ class Midtrans
     /**
      * Payment with SNAP Midtrans
      * Data to Decode before sent CURL Request
-     * After get response from CURL, then parsing data encode to decode [Object]
+     * After get response from CURL, then parsing data encode to decode [Object].
      *
      * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
      *

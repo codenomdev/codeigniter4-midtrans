@@ -12,7 +12,7 @@ namespace Codenom\Midtrans\Parse;
 class JSONParse
 {
     /**
-     * Encode data
+     * Encode data.
      *
      * @var \Laminas\Json\Json
      *
@@ -26,7 +26,7 @@ class JSONParse
     }
 
     /**
-     * Decode data to Object return
+     * Decode data to Object return.
      *
      * @var \Laminas\Json\Json
      *
@@ -40,7 +40,7 @@ class JSONParse
     }
 
     /**
-     * Decode data to Array return
+     * Decode data to Array return.
      *
      * @var \Laminas\Json\Json
      *

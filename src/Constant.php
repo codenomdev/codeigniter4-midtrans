@@ -12,7 +12,7 @@ namespace Codenom\Midtrans;
 class Constant
 {
     /**
-     * Constant value Base Veritrans
+     * Constant value Base Veritrans.
      *
      * @return Sandbox Base URL Veritrans
      *
@@ -20,7 +20,7 @@ class Constant
      */
     const SANDBOX_BASE_URL = 'https://api.sandbox.veritrans.co.id/v2';
     /**
-     * Constant value Base Veritrans
+     * Constant value Base Veritrans.
      *
      * @return production Base URL Veritrans
      *
@@ -28,7 +28,7 @@ class Constant
      */
     const PRODUCTION_BASE_URL = 'https://api.veritrans.co.id/v2';
     /**
-     * Constant value Base Midtrans
+     * Constant value Base Midtrans.
      *
      * @return Sandbox Base URL Midtrans
      *
@@ -36,7 +36,7 @@ class Constant
      */
     const SNAP_SANDBOX_BASE_URL = 'https://app.sandbox.midtrans.com/snap/v1';
     /**
-     * Constant value Base Midtrans
+     * Constant value Base Midtrans.
      *
      * @return Production Base URL Midtrans
      *
@@ -44,25 +44,25 @@ class Constant
      */
     const SNAP_PRODUCTION_BASE_URL = 'https://app.midtrans.com/snap/v1';
     /**
-     * CURL type POST
+     * CURL type POST.
      *
      * @return string
      */
     const CURL_TYPE_POST = 'POST';
     /**
-     * CURL type GET
+     * CURL type GET.
      *
      * @return string
      */
     const CURL_TYPE_GET = 'GET';
     /**
-     * Content Type Header request
+     * Content Type Header request.
      *
      * @return string
      */
     const CONTENT_TYPE = 'application/json';
     /**
-     * Accpet Header request
+     * Accpet Header request.
      *
      * @return string
      */

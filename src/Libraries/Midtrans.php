@@ -12,7 +12,7 @@ namespace Codenom\Midtrans\Libraries;
 class Midtrans
 {
     /**
-     * Property Protected
+     * Property Protected.
      *
      * @var \Codenom\Midtrans\Config\Midtrans;
      */
@@ -24,7 +24,7 @@ class Midtrans
     }
 
     /**
-     * Get baseUrl
+     * Get baseUrl.
      *
      * @return string Midtrans API URL, depends on public $isProduction
      */
@@ -35,7 +35,7 @@ class Midtrans
     }
 
     /**
-     * Get snapBaseUrl
+     * Get snapBaseUrl.
      *
      * @return string Snap API URL, depends on public $isProduction
      */

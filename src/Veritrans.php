@@ -15,7 +15,7 @@ use Codenom\Midtrans\Libraries\Midtrans;
 class Veritrans
 {
     /**
-     * Property Protected
+     * Property Protected.
      *
      * @var \Codenom\Midtrans\Config\Midtrans;
      */
@@ -31,7 +31,7 @@ class Veritrans
     /**
      * Payment with SNAP Midtrans
      * Data to Decode before sent CURL Request
-     * After get response from CURL, then parsing data encode to decode [Object]
+     * After get response from CURL, then parsing data encode to decode [Object].
      *
      * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
      *
@@ -53,7 +53,7 @@ class Veritrans
     /**
      * Payment VT Web Checkout Payments
      * Data to Decode before sent CURL Request
-     * After get response from CURL, then parsing data encode to decode [Object]
+     * After get response from CURL, then parsing data encode to decode [Object].
      *
      * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
      *
@@ -76,7 +76,7 @@ class Veritrans
     /**
      * Payment VT Web Direct Checkout Payments
      * Data to Decode before sent CURL Request
-     * After get response from CURL, then parsing data encode to decode [Object]
+     * After get response from CURL, then parsing data encode to decode [Object].
      *
      * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
      *
@@ -99,7 +99,7 @@ class Veritrans
     /**
      * Appove challenge transaction
      * Data to Decode before sent CURL Request
-     * After get response from CURL, then parsing data encode to decode [Object]
+     * After get response from CURL, then parsing data encode to decode [Object].
      *
      * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
      *
@@ -121,7 +121,7 @@ class Veritrans
     /**
      * Cancel transaction before it's setteled
      * Data to Decode before sent CURL Request
-     * After get response from CURL, then parsing data encode to decode [Object]
+     * After get response from CURL, then parsing data encode to decode [Object].
      *
      * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
      *
@@ -143,7 +143,7 @@ class Veritrans
     /**
      * Expire transaction before it's setteled
      * Data to Decode before sent CURL Request
-     * After get response from CURL, then parsing data encode to decode [Object]
+     * After get response from CURL, then parsing data encode to decode [Object].
      *
      * @var Type CURL POST = \Codenom\Midtrans\Constant::CURL_TYPE_POST
      *

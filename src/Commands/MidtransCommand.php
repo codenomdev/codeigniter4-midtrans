@@ -13,7 +13,7 @@ class MidtransCommand extends BaseCommand
     protected $description = 'Midtrans config file publisher';
 
     /**
-     * Private or protected function
+     * Private or protected function.
      *
      * @var string
      */
@@ -22,7 +22,7 @@ class MidtransCommand extends BaseCommand
     //--------------------------------------------------------------------
 
     /**
-     * Copy config file
+     * Copy config file.
      *
      * @param array $params
      */
@@ -80,6 +80,7 @@ class MidtransCommand extends BaseCommand
             CLI::error('Cancelled');
             exit();
         }
+
         try {
             write_file($appPath . $path, $content);
         } catch (\Exception $e) {

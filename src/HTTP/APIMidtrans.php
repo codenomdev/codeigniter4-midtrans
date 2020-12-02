@@ -32,8 +32,8 @@ class APIMidtrans
                 $typeCURL,
                 $endPoint,
                 ['headers' => [
-                    'Content-type' => \Codenom\Midtrans\Constant::CONTENT_TYPE,
-                    'Accept'     => \Codenom\Midtrans\Constant::ACCEPT,
+                    'Content-type'  => \Codenom\Midtrans\Constant::CONTENT_TYPE,
+                    'Accept'        => \Codenom\Midtrans\Constant::ACCEPT,
                     'Authorization' => 'Basic ' . \base64_encode($serverKey . ':'),
                 ]]
             )->getBody();
