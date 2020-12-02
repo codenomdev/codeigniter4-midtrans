@@ -38,7 +38,7 @@ class MidtransCommand extends BaseCommand
      */
     protected function determineSourcePath()
     {
-        $this->sourcePath = realpath(__DIR__.'/../');
+        $this->sourcePath = \realpath(__DIR__ . '/../');
         if ($this->sourcePath == '/' || empty($this->sourcePath)) {
             CLI::error('Unable to determine the correct source directory. Bailing.');
             exit();
@@ -53,10 +53,10 @@ class MidtransCommand extends BaseCommand
     protected function publishConfig()
     {
         $path = "{$this->sourcePath}/Config/Midtrans.php";
-        $content = file_get_contents($path);
-        $content = str_replace('use CodeIgniter\Config\BaseConfig', "use Codenom\Midtrans\Config\Midtrans as MidtransConfig", $content);
-        $content = str_replace('namespace Codenom\Midtrans\Config', 'namespace Config', $content);
-        $content = str_replace('extends BaseConfig', 'extends MidtransConfig', $content);
+        $content = \file_get_contents($path);
+        $content = \str_replace('use CodeIgniter\Config\BaseConfig', "use Codenom\Midtrans\Config\Midtrans as MidtransConfig", $content);
+        $content = \str_replace('namespace Codenom\Midtrans\Config', 'namespace Config', $content);
+        $content = \str_replace('extends BaseConfig', 'extends MidtransConfig', $content);
         $this->writeFile('Config/Midtrans.php', $content);
     }
 
@@ -72,23 +72,23 @@ class MidtransCommand extends BaseCommand
     {
         $config = new Autoload();
         $appPath = $config->psr4[APP_NAMESPACE];
-        $directory = dirname($appPath.$path);
-        if (!is_dir($directory)) {
-            mkdir($directory, 0777, true);
+        $directory = \dirname($appPath . $path);
+        if (!\is_dir($directory)) {
+            \mkdir($directory, 0777, true);
         }
-        if (file_exists($appPath.$path) && CLI::prompt('Config file already exists, do you want to replace it?', ['y', 'n']) == 'n') {
+        if (\file_exists($appPath . $path) && CLI::prompt('Config file already exists, do you want to replace it?', ['y', 'n']) == 'n') {
             CLI::error('Cancelled');
             exit();
         }
 
         try {
-            write_file($appPath.$path, $content);
+            write_file($appPath . $path, $content);
         } catch (\Exception $e) {
             $this->showError($e);
             exit();
         }
-        $path = str_replace($appPath, '', $path);
-        CLI::write(CLI::color('Created: ', 'yellow').$path);
+        $path = \str_replace($appPath, '', $path);
+        CLI::write(CLI::color('Created: ', 'yellow') . $path);
     }
 
     //--------------------------------------------------------------------

@@ -53,7 +53,7 @@ class Midtrans
         return \Codenom\Midtrans\Parse\JSONParse::decodeToObject(
             APIMidtrans::call(
                 \Codenom\Midtrans\Constant::CURL_TYPE_POST,
-                $this->midtrans->getSnapBaseUrl().'/transactions',
+                $this->midtrans->getSnapBaseUrl() . '/transactions',
                 $this->config->serverKey,
                 $placeOrder
             )
