@@ -13,6 +13,9 @@ env:
 
 php:
   - 7.2
+  
+install:
+  - composer update --no-interaction --prefer-dist $DEPENDENCIES
 
   branches:
   only:
