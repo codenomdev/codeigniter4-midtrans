@@ -26,7 +26,7 @@ The following plugin is tested under following environment:
 After installation Module, please follow instruction:
 * Publish via CLI: ``` php spark codenom:midtrans publish ``` .
 * After publish, check file Midtrans.php on **App/Config/Midtrans.php**.
-* Setup Merchant Key, Client Key and set Production ```public $isProduction = **TRUE** (Production) or **FALSE** (Sandbox) ``` on Midtrans.php.
+* Setup Merchant Key, ID Merchant, Client Key and set Production ```public $isProduction = TRUE (Production) or FALSE (Sandbox) ``` on Midtrans.php.
 
 #### For more setup Merchant Key & Client Key [Retrieve API Access Key](https://docs.midtrans.com/en/midtrans-account/overview?id=retrieving-api-access-keys).
 
@@ -47,6 +47,16 @@ $services = new Config\Services::Midtrans();
 $services = new services('Midtrans');
 ```
 
+### Available Function
+* Get Snap Token
+```php
+/**
+ * @param array $placeOrder
+ * @return object response CURL
+ */
+$services->getSnapToken(array $placeOrder = []);
+```
+
 ## Use Veritrans
 ```php
 //load services Veritrans
@@ -61,6 +71,16 @@ $services = new services('Veritrans');
 ```
 
 ### Available Function
+* Get Status transaction
+```php
+/**
+ * @param string $id
+ *
+ * @return object response CURL
+ */
+ $services->getStatus($id);
+```
+
 * Appove challenge transaction
 ```php
 /**
