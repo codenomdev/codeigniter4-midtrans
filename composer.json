@@ -22,7 +22,7 @@
     ],
     "require": {
         "php": "~7.2||~7.3.0",
-        "laminas/laminas-json": "dev-master"
+        "laminas/laminas-json": "~3.2.0"
     },
     "require-dev": {
         "codeigniter4/framework": "dev-master"
